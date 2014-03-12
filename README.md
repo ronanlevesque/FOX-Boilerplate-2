@@ -98,7 +98,7 @@ FOX Boilerplate also comes with an optional notification system. In order to use
 
 ## Help
 
-If you need help, please [contact me](https://twitter.com/eskiiss) on Twitter.
+If you need help, please [contact me](https://twitter.com/ronanlevesque) on Twitter.
 
 ## License
 
