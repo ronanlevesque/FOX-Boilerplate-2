@@ -120,6 +120,14 @@ gulp.task('copy', function () {
 
 // Msg tasks
 
+gulp.task('servermsg', function () {
+	return gulp.src('./dev')
+	.pipe(growlNotifier({
+		title: '[TASK] -- Local server',
+		message: 'Local server created at localhost:1337.'
+	}));
+});
+
 gulp.task('deploymsg', function () {
 	return gulp.src('./dev')
 	.pipe(growlNotifier({
@@ -138,6 +146,6 @@ gulp.task('testmsg', function () {
 
 // Run tasks
 
-gulp.task('default', ['connect', 'watch']);
+gulp.task('default', ['connect', 'servermsg', 'watch']);
 gulp.task('test', ['css', 'html', 'lint', 'testmsg']);
 gulp.task('deploy', ['minify', 'uglify', 'img', 'svg', 'copy', 'deploymsg']);
