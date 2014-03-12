@@ -1,4 +1,4 @@
-# FOX Boilerplate
+# FOX Boilerplate 2
 
 An HTML5 / Sass / Gulp Boilerplate including [FOX CSS](http://fox-css.com). Currently composed of the following :
 
