@@ -10,6 +10,7 @@ var	gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
 	imagemin = require('gulp-imagemin'),
 	svg2png = require('gulp-svg2png'),
+	svgmin = require('gulp-svgmin'),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
 	growl = require('gulp-notify-growl');
@@ -109,6 +110,7 @@ gulp.task('img', function() {
 
 gulp.task('svg', function () {
 	return gulp.src('./dev/img/**/*.svg')
+	.pipe(svgmin())
 	.pipe(svg2png())
 	.pipe(gulp.dest('./dist/img'));
 });

@@ -1,26 +1,27 @@
 {
-	"name": "FOX-Boilerplate-2",
-	"version": "0.1.0",
-	"description": "Boilerplate with Gulp and FOX CSS",
-	"license": "MIT",
-	"repository": "eskiss/fox-boilerplate-2",
-	"author": {
-		"name": "Ronan Levesque",
-		"url": "http://ronanlevesque.fr"
-	},
-	"devDependencies": {
-		"gulp": "*",
-		"gulp-connect": "*",
-		"gulp-ruby-sass": "*",
-		"gulp-autoprefixer": "*",
-		"gulp-minify-css": "*",
-		"gulp-csslint": "*",
-		"gulp-htmlhint": "*",
-		"gulp-jshint": "*",
-		"gulp-imagemin": "*",
-		"gulp-svg2png": "*",
-		"gulp-concat": "*",
-		"gulp-uglify": "*",
-		"gulp-notify-growl": "*"
-	}
+  "name": "FOX-Boilerplate-2",
+  "version": "0.1.0",
+  "description": "Boilerplate with Gulp and FOX CSS",
+  "license": "MIT",
+  "repository": "eskiss/fox-boilerplate-2",
+  "author": {
+    "name": "Ronan Levesque",
+    "url": "http://ronanlevesque.fr"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-connect": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-minify-css": "*",
+    "gulp-csslint": "*",
+    "gulp-htmlhint": "*",
+    "gulp-jshint": "*",
+    "gulp-imagemin": "*",
+    "gulp-svg2png": "*",
+    "gulp-svgmin": "*",
+    "gulp-concat": "*",
+    "gulp-uglify": "*",
+    "gulp-notify-growl": "*"
+  }
 }
