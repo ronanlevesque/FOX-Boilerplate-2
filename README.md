@@ -42,6 +42,7 @@ Gulp dependencies for now :
 * gulp-jshint
 * gulp-imagemin
 * gulp-svg2png
+* gulp-svgmin
 * gulp-concat
 * gulp-uglify
 * gulp-notify-growl
