@@ -1,0 +1,26 @@
+{
+	"name": "FOX-Boilerplate-2",
+	"version": "0.1.0",
+	"description": "Minify PNG, JPEG and GIF images",
+	"license": "MIT",
+	"repository": "eskiss/fox-boilerplate-2",
+	"author": {
+		"name": "Ronan Levesque",
+		"url": "http://ronanlevesque.fr"
+	},
+	"devDependencies": {
+		"gulp": "*",
+		"gulp-connect": "*",
+		"gulp-ruby-sass": "*",
+		"gulp-autoprefixer": "*",
+		"gulp-minify-css": "*",
+		"gulp-csslint": "*",
+		"gulp-htmlhint": "*",
+		"gulp-jshint": "*",
+		"gulp-imagemin": "*",
+		"gulp-svg2png": "*",
+		"gulp-concat": "*",
+		"gulp-uglify": "*",
+		"gulp-notify-growl": "*"
+	}
+}

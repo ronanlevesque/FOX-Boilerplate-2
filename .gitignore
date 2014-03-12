@@ -1,0 +1,12 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Node
+
+/node_modules/
+
+# Sass
+
+/.sass-cache/
+

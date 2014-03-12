@@ -1,0 +1,22 @@
+/*
+FOX CSS 2.0
+by Ronan Levesque - CC BY 3.0 license
+
+Credits:
+- Normalize by Nicolas Gallagher http://bit.ly/PbZ7Pf
+- KNACSS by Raphael Goetter/Alsacreations http://knacss.com/
+*/
+
+// MIXINS
+
+@import "mixins";
+
+// IMPORT CHOSEN FOX CSS MODULES
+
+@import "reset";
+@import "formatting";
+@import "layout";
+@import "responsive-layout";
+@import "ie";
+
+// YOUR STYLES OR PARTIAL SCSS FILES GO HERE
