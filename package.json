@@ -1,7 +1,7 @@
 {
 	"name": "FOX-Boilerplate-2",
 	"version": "0.1.0",
-	"description": "Minify PNG, JPEG and GIF images",
+	"description": "Boilerplate with Gulp and FOX CSS",
 	"license": "MIT",
 	"repository": "eskiss/fox-boilerplate-2",
 	"author": {
