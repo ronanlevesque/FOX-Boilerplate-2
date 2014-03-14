@@ -130,19 +130,19 @@ gulp.task('servermsg', function () {
 	}));
 });
 
-gulp.task('deploymsg', function () {
-	return gulp.src('./dev')
-	.pipe(growlNotifier({
-		title: '[TASK] -- Deploy',
-		message: 'Files successfully deployed under /dist.'
-	}));
-});
-
 gulp.task('testmsg', function () {
 	return gulp.src('./dev')
 	.pipe(growlNotifier({
 		title: '[TASK] -- Testing files',
 		message: 'Tests run on your CSS, HTML and JS files. See console for more details.'
+	}));
+});
+
+gulp.task('deploymsg', function () {
+	return gulp.src('./dev')
+	.pipe(growlNotifier({
+		title: '[TASK] -- Deploy',
+		message: 'Files successfully deployed under /dist.'
 	}));
 });
 
