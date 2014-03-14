@@ -50,7 +50,7 @@ gulp.task('sass', function() {
 	}));
 });
 
-gulp.task('html', function () {
+gulp.task('htmlreload', function () {
 	return gulp.src('./dev/*.html')
 	.pipe(connect.reload());
 });
@@ -64,7 +64,7 @@ gulp.task('scripts', function() {
 
 gulp.task('watch', function () {
 	gulp.watch('./dev/css/**/*.scss', ['sass']);
-	gulp.watch('./dev/**/*.html', ['html']);
+	gulp.watch('./dev/**/*.html', ['htmlreload']);
 	gulp.watch('./dev/js/**/*.js', ['scripts']);
 });
 
