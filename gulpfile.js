@@ -17,14 +17,13 @@ var	gulp = require('gulp'),
 
 // Server & Notifications
 
-gulp.task('connect', connect.server({
-	root: ['dev'],
-	port: 1337,
-	livereload: true,
-	open: {
-		browser: 'chrome' // if not working OS X browser: 'Google Chrome'
-	}
-}));
+gulp.task('connect', function() {
+	connect.server({
+		root: 'dev',
+		port: 1337,
+		livereload: true
+	});
+});
 
 var growlNotifier = growl();
 
