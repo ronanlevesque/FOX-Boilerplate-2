@@ -394,11 +394,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 @media (min-resolution: 0.001dpcm) {
-  .grid {
+  _:-o-prefocus, .grid {
     font-size: inherit;
     line-height: 0;
   }
 }
+.grid > li, .grid > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.grid .placeholder {
+  margin-bottom: 0;
+}
+
 .grid:after {
   content: '';
   display: inline-block;
@@ -408,10 +417,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .grid .break {
   width: 100%;
   height: 0;
-}
-
-.grid > li, .grid > div {
-  display: inline-block;
 }
 
 /*-------------------------*/
