@@ -11,7 +11,7 @@
   "devDependencies": {
     "gulp": "*",
     "gulp-connect": "*",
-    "gulp-ruby-sass": "*",
+    "gulp-sass": "*",
     "gulp-autoprefixer": "*",
     "gulp-minify-css": "*",
     "gulp-csslint": "*",

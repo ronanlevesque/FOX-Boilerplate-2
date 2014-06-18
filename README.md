@@ -24,17 +24,15 @@ You need to have [Node](http://nodejs.org/) and [Gulp](http://gulpjs.com/) insta
 
 You may need to run `sudo` depending on your OS, or run the command shell as an Admin (for Windows users).
 
-Download and install FOX Boilerplate files in the directory where you want to work. Just install the Gulp dependencies by clicking on install-dependencies.bat or install-dependencies.command depending on your OS.
+Download and install FOX Boilerplate files in the directory where you want to work. Just install the Gulp dependencies by running the following command in your project folder :
 
-Alternatively, you can also run the following command :
-
-	npm install <module> --save-dev
+	npm install
 
 Gulp dependencies for now :
 
 * gulp
 * gulp-connect
-* gulp-ruby-sass
+* gulp-sass
 * gulp-autoprefixer
 * gulp-minify-css
 * gulp-csslint
