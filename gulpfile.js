@@ -1,19 +1,19 @@
 // Plugins
 
 var gulp = require('gulp'),
-  connect = require('gulp-connect'),
-  sass = require('gulp-sass'),
-  autoprefixer = require('gulp-autoprefixer'),
-  minify = require('gulp-minify-css'),
-  csslint = require('gulp-csslint'),
-  htmlhint = require('gulp-htmlhint'),
-  jshint = require('gulp-jshint'),
-  imagemin = require('gulp-imagemin'),
-  svg2png = require('gulp-svg2png'),
-  svgmin = require('gulp-svgmin'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  growl = require('gulp-notify-growl');
+    connect = require('gulp-connect'),
+    sass = require('gulp-sass'),
+    autoprefixer = require('gulp-autoprefixer'),
+    minify = require('gulp-minify-css'),
+    csslint = require('gulp-csslint'),
+    htmlhint = require('gulp-htmlhint'),
+    jshint = require('gulp-jshint'),
+    imagemin = require('gulp-imagemin'),
+    svg2png = require('gulp-svg2png'),
+    svgmin = require('gulp-svgmin'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    growl = require('gulp-notify-growl');
 
 // Server & Notifications
 
