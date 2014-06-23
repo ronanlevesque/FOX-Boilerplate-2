@@ -43,7 +43,7 @@ Gulp dependencies for now :
 * gulp-svgmin
 * gulp-concat
 * gulp-uglify
-* gulp-notify-growl
+* gulp-notify
 
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
 
