@@ -22,6 +22,6 @@
     "gulp-svgmin": "*",
     "gulp-concat": "*",
     "gulp-uglify": "*",
-    "gulp-notify-growl": "*"
+    "gulp-notify": "*"
   }
 }

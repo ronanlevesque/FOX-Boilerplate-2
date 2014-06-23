@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     svgmin = require('gulp-svgmin'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    growl = require('gulp-notify-growl');
+    notify = require('gulp-notify');
 
 // Server & Notifications
 
@@ -24,8 +24,6 @@ gulp.task('connect', function() {
     livereload: true
   });
 });
-
-var growlNotifier = growl();
 
 // Handle CLI errors
 
@@ -39,10 +37,11 @@ function handleError(err) {
 gulp.task('sass', function() {
   return gulp.src(['./dev/css/sass/**/*.scss', '!./dev/css/sass/**/_*.scss'])
   .pipe(sass())
+  .on('error', notify.onError("Error: <%= error.message %>"))
   .on('error', handleError)
   .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
   .pipe(gulp.dest('./dev/css'))
-  .pipe(growlNotifier({
+  .pipe(notify({
     title: '[TASK] -- Sass',
     message: 'Your SCSS files have been correctly compiled.'
   }));
@@ -123,7 +122,7 @@ gulp.task('copy', function () {
 
 gulp.task('servermsg', function () {
   return gulp.src('./dev')
-  .pipe(growlNotifier({
+  .pipe(notify({
     title: '[TASK] -- Local server',
     message: 'Local server created at localhost:1337.'
   }));
@@ -131,7 +130,7 @@ gulp.task('servermsg', function () {
 
 gulp.task('testmsg', function () {
   return gulp.src('./dev')
-  .pipe(growlNotifier({
+  .pipe(notify({
     title: '[TASK] -- Testing files',
     message: 'Tests run on your CSS, HTML and JS files. See console for more details.'
   }));
@@ -139,7 +138,7 @@ gulp.task('testmsg', function () {
 
 gulp.task('deploymsg', function () {
   return gulp.src('./dev')
-  .pipe(growlNotifier({
+  .pipe(notify({
     title: '[TASK] -- Deploy',
     message: 'Files successfully deployed under /dist.'
   }));
