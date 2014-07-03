@@ -40,11 +40,7 @@ gulp.task('sass', function() {
   .on('error', notify.onError("Error: <%= error.message %>"))
   .on('error', handleError)
   .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-  .pipe(gulp.dest('./dev/css'))
-  .pipe(notify({
-    title: '[TASK] -- Sass',
-    message: 'Your SCSS files have been correctly compiled.'
-  }));
+  .pipe(gulp.dest('./dev/css'));
 });
 
 gulp.task('htmlreload', function () {
