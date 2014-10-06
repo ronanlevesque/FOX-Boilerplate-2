@@ -74,10 +74,10 @@ $fix-mqs: false !default;
 }
 
 @mixin order($flexval) {
-  -webkit-box-ordinal-group: $flexval;  
-  -moz-box-ordinal-group: $flexval;  
-  -ms-flex-order: $flexval;  
-  -webkit-order: $flexval;  
+  -webkit-box-ordinal-group: $flexval;
+  -moz-box-ordinal-group: $flexval;
+  -ms-flex-order: $flexval;
+  -webkit-order: $flexval;
   order: $flexval;
 }
 
