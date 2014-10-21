@@ -156,17 +156,17 @@ td {
 .orange {
   background: #d35400; }
   .orange:hover, .orange:focus {
-    background: #b94700; }
+    background: #b94a00; }
 
 .yellow {
   background: #ddb705; }
   .yellow:hover, .yellow:focus {
-    background: #c4a104; }
+    background: #c4a204; }
 
 .green {
   background: #27ae60; }
   .green:hover, .green:focus {
-    background: #229954; }
+    background: #229955; }
 
 .blue {
   background: #3498db; }
@@ -180,7 +180,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   display: block; }
 
 * {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   *behavior: url(scripts/boxsizing.htc); }
 
@@ -306,7 +305,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 @media (min-resolution: 0.001dpcm) {
   _:-o-prefocus, .grid {
     font-size: inherit;
-    line-height: 0; } }
+    line-height: 0; }
+ }
 
 .grid > li, .grid > div {
   display: inline-block;
@@ -330,52 +330,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 @media screen and (min-width: 40em) {
   .r10 {
     width: 10%; }
+
   .r20 {
     width: 20%; }
+
   .r25 {
     width: 25%; }
+
   .r30 {
     width: 30%; }
+
   .r33 {
     width: 33.33333%; }
+
   .r40 {
     width: 40%; }
+
   .r50 {
     width: 50%; }
+
   .r60 {
     width: 60%; }
+
   .r66 {
     width: 66.66667%; }
+
   .r70 {
     width: 70%; }
+
   .r75 {
     width: 75%; }
+
   .r80 {
     width: 80%; }
+
   .r50-25 {
     width: 50%; }
+
   .r50-33 {
     width: 50%; }
+
   .r33-33 {
     width: 33.33333%; }
+
   .r66-33 {
     width: 66.66667%; }
+
   .r10, .r20, .r25, .r30, .r33, .r40, .r50, .r60, .r66, .r70, .r80, .r50-25, .r50-33, .r33-33, .r66-33 {
-    display: inline-block; } }
+    display: inline-block; }
+ }
 
 @media screen and (min-width: 60em) {
   .r50-25 {
     width: 25%; }
+
   .r50-33 {
     width: 33.33333%; }
+
   .r33-33 {
     width: 33.33333%; }
+
   .r66-33 {
     width: 33.33333%; }
+
   .r100-33 {
     width: 33.33333%;
     display: inline-block;
-    vertical-align: top; } }
+    vertical-align: top; }
+ }
 
 /*-------------------------*/
 /* +IE SUPPORT             */
