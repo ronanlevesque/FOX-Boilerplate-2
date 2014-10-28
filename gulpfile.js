@@ -83,7 +83,7 @@ gulp.task('watch', function () {
   gulp.watch(devFolder.css + '**/*.scss', ['sass']);
   gulp.watch(devFolder.css + '**/*.css', ['css']);
   gulp.watch(devFolder.js + '**/*.js', ['scripts']);
-  gulp.watch(baseFolder.dev + '**/*.html', ['htmlreload']);
+  gulp.watch(baseFolder.dev + '**/*.html', ['html']);
 });
 
 // Testing tasks
