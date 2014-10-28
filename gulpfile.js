@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     notify = require('gulp-notify');
 
-// Server
+// Server & Notifications
 
 gulp.task('connect', function() {
   connect.server({
@@ -32,71 +32,57 @@ function handleError(err) {
   this.emit('end');
 }
 
-// Folders
-
-var baseFolder = {
-  dev  : './dev/',
-  dist : './dist/'
-};
-
-var devFolder = {
-  css  : baseFolder.dev + 'css/',
-  js : baseFolder.dev + 'js/',
-  img  : baseFolder.dev + 'img/'
-};
-
-var distFolder = {
-  css  : baseFolder.dist + 'css/',
-  js : baseFolder.dist + 'js/',
-  img  : baseFolder.dist + 'img/'
-};
-
 // Dev tasks
 
 gulp.task('sass', function() {
-  return gulp.src([devFolder.css + 'sass/**/*.scss'])
+  return gulp.src(['./dev/css/sass/**/*.scss', '!./dev/css/sass/**/_*.scss'])
   .pipe(sass())
   .on('error', notify.onError("Error: <%= error.message %>"))
   .on('error', handleError)
   .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-  .pipe(gulp.dest(devFolder.css))
-  .pipe(connect.reload());
+  .pipe(gulp.dest('./dev/css'))
 });
 
 gulp.task('htmlreload', function () {
-  return gulp.src(baseFolder.dev + '**/*.html')
+  return gulp.src('./dev/**/*.html')
+  .pipe(connect.reload());
+});
+
+gulp.task('css', function () {
+  return gulp.src('./dev/**/*.html')
   .pipe(connect.reload());
 });
 
 gulp.task('scripts', function() {
-  return gulp.src([devFolder.js + '**/*.js', '!' + devFolder.js + 'ie/*.js', '!' + devFolder.js + '**/main.js'])
+  return gulp.src(['./dev/js/**/*.js', '!./dev/js/ie/*.js', '!./dev/js/**/main.js'])
   .pipe(concat('main.js'))
-  .pipe(gulp.dest(devFolder.js))
+  .pipe(gulp.dest('./dev/js'))
   .pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
-  gulp.watch(devFolder.css + '**/*.scss', ['sass']);
-  gulp.watch(devFolder.js + '**/*.js', ['scripts']);
-  gulp.watch(baseFolder.dev + '**/*.html', ['htmlreload']);
+  gulp.watch('./dev/css/**/*.scss', ['sass']);
+  gulp.watch('./dev/css/**/*.css', ['css']);
+  gulp.watch('./dev/js/**/*.js', ['scripts']);
+  gulp.watch('./dev/**/*.html', ['htmlreload']);
 });
 
 // Testing tasks
 
-gulp.task('css', function() {
-  return gulp.src(devFolder.css + '**/*.css')
+gulp.task('csslint', function() {
+  return gulp.src('./dev/css/**/*.css')
   .pipe(csslint())
   .pipe(csslint.reporter('default'))
 });
 
-gulp.task('html', function() {
-  return gulp.src(baseFolder.dev + '**/*.html')
+gulp.task('htmlhint', function() {
+  return gulp.src('./dev/**/*.html')
   .pipe(htmlhint())
   .pipe(htmlhint.reporter('default'))
 });
 
 gulp.task('lint', function() {
-  return gulp.src(devFolder.js + '**/*.js')
+  return gulp.src('./dev/js/**/*.js')
   .pipe(jshint())
   .pipe(jshint.reporter('default'))
 });
@@ -104,39 +90,39 @@ gulp.task('lint', function() {
 // Deploy tasks
 
 gulp.task('minify', function() {
-  return gulp.src(devFolder.css + '**/*.css')
+  return gulp.src('./dev/css/**/*.css')
   .pipe(minify())
-  .pipe(gulp.dest(distFolder.css))
+  .pipe(gulp.dest('./dist/css'))
 });
 
 gulp.task('uglify', function() {
-  return gulp.src(devFolder.js + 'main.js')
+  return gulp.src('./dev/js/main.js')
   .pipe(uglify())
-  .pipe(gulp.dest(distFolder.js))
+  .pipe(gulp.dest('./dist/js'))
 });
 
 gulp.task('img', function() {
-  return gulp.src(devFolder.img + '**/*')
+  return gulp.src('./dev/img/**/*')
   .pipe(imagemin())
-  .pipe(gulp.dest(distFolder.img))
+  .pipe(gulp.dest('./dist/img'))
 });
 
 gulp.task('svg', function () {
-  return gulp.src(devFolder.img + '**/*.svg')
+  return gulp.src('./dev/img/**/*.svg')
   .pipe(svgmin())
   .pipe(svg2png())
-  .pipe(gulp.dest(distFolder.img));
+  .pipe(gulp.dest('./dist/img'));
 });
 
 gulp.task('copy', function () {
-  return gulp.src([baseFolder.dev + '*.html', './dev/**/*.php'])
-  .pipe(gulp.dest(baseFolder.dist));
+  return gulp.src(['./dev/**/*.html', './dev/**/*.php'])
+  .pipe(gulp.dest('./dist'));
 });
 
 // Msg tasks
 
 gulp.task('servermsg', function () {
-  return gulp.src(baseFolder.dev)
+  return gulp.src('./dev')
   .pipe(notify({
     title: '[TASK] -- Local server',
     message: 'Local server created at localhost:1337.'
@@ -144,7 +130,7 @@ gulp.task('servermsg', function () {
 });
 
 gulp.task('testmsg', function () {
-  return gulp.src(baseFolder.dev)
+  return gulp.src('./dev')
   .pipe(notify({
     title: '[TASK] -- Testing files',
     message: 'Tests run on your CSS, HTML and JS files. See console for more details.'
@@ -152,7 +138,7 @@ gulp.task('testmsg', function () {
 });
 
 gulp.task('deploymsg', function () {
-  return gulp.src(baseFolder.dev)
+  return gulp.src('./dev')
   .pipe(notify({
     title: '[TASK] -- Deploy',
     message: 'Files successfully deployed under /dist.'
@@ -162,5 +148,5 @@ gulp.task('deploymsg', function () {
 // Run tasks
 
 gulp.task('default', ['connect', 'servermsg', 'watch']);
-gulp.task('test', ['css', 'html', 'lint', 'testmsg']);
+gulp.task('test', ['csslint', 'htmlhint', 'lint', 'testmsg']);
 gulp.task('deploy', ['minify', 'uglify', 'img', 'svg', 'copy', 'deploymsg']);
