@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var $$ = require('gulp-load-plugins')();
 
-// Server
+// Server & Livereload
 
 gulp.task('connect', function () {
   var connect = require('connect');
@@ -11,13 +11,13 @@ gulp.task('connect', function () {
   var serveIndex = require('serve-index');
 
   var app = connect()
-    .use(require('connect-livereload')({ port: 35729 }))
-    .use(serveStatic('dev'))
-    .use(serveStatic('.tmp'))
-    .use(serveIndex('dev'));
+  .use(require('connect-livereload')({ port: 35729 }))
+  .use(serveStatic('dev'))
+  .use(serveStatic('.tmp'))
+  .use(serveIndex('dev'));
 
   require('http').createServer(app)
-    .listen(1337)
+  .listen(1337)
 });
 
 // Handle CLI errors
