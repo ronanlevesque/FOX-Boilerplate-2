@@ -5,14 +5,6 @@ var $$ = require('gulp-load-plugins')();
 
 // Server
 
-// gulp.task('connect', function() {
-//   $$.connect.server({
-//     root: 'dev',
-//     port: 1337,
-//     livereload: true
-//   });
-// });
-
 gulp.task('connect', function () {
   var connect = require('connect');
   var serveStatic = require('serve-static');
