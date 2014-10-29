@@ -5,7 +5,7 @@ An HTML5 / Sass / Gulp Boilerplate including [FOX CSS](http://fox-css.com). Curr
 * HTML5 responsive base template
 * FOX CSS framework (Sass)
 * Sass & CSS3 Autoprefixer (compile on default task)
-* Livereload with [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)
+* Livereload (no plugin required)
 * JSHint, CSS Lint and HTML Lint
 * IE7&8 support (HTML5 shiv & Respond.js)
 * Files minification (CSS, JS and images)
@@ -28,23 +28,6 @@ Download and install FOX Boilerplate files in the directory where you want to wo
 
 	npm install
 
-Gulp dependencies for now :
-
-* gulp
-* gulp-connect
-* gulp-sass
-* gulp-autoprefixer
-* gulp-minify-css
-* gulp-csslint
-* gulp-htmlhint
-* gulp-jshint
-* gulp-imagemin
-* gulp-svg2png
-* gulp-svgmin
-* gulp-concat
-* gulp-uglify
-* gulp-notify
-
 **IMPORTANT** : you'll also need to install [Ruby](https://www.ruby-lang.org) and [Sass](http://sass-lang.com/) in order to be able to run Sass.
 
 ## Files configuration
@@ -59,9 +42,8 @@ Files should be placed in the following folders inside your project :
 * CSS : dev/css/
 * SCSS : dev/css/sass/..
 * JS files : dev/js/
-* JS plugins : dev/js/plugins/..
 * Images : dev/img/..
-* HTML files : anywhere inside /dev/
+* HTML files : anywhere inside dev/
 
 ## Usage
 
@@ -87,13 +69,9 @@ Run the following commands depending on what you want.
 
 If you need more info on Gulp, you should take a look at Gulp's [guide](https://github.com/gulpjs/gulp/blob/master/docs/README.md).
 
-### gulp install-dependencies
-
-`gulp install-dependencies` will install and update your npm dependencies.
-
 ## Notifications
 
-FOX Boilerplate also comes with an optional notification system. In order to use it, you may need to install Growl.
+FOX Boilerplate also comes with an optional notification system.
 
 ## Help
 
