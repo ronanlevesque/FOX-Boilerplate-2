@@ -26,9 +26,6 @@ gulp.task('connect', function () {
 
   require('http').createServer(app)
     .listen(1337)
-    .on('listening', function () {
-      console.log('Started connect web server on http://localhost:9000');
-    });
 });
 
 // Handle CLI errors
