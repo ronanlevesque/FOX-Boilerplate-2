@@ -13,7 +13,6 @@ gulp.task('connect', function () {
   var app = connect()
   .use(require('connect-livereload')({ port: 35729 }))
   .use(serveStatic('dev'))
-  .use(serveStatic('.tmp'))
   .use(serveIndex('dev'));
 
   require('http').createServer(app)
@@ -70,7 +69,10 @@ gulp.task('watch', function () {
   gulp.watch([
     devFolder.css + '**/*.css',
     devFolder.js + '**/*.js',
-    baseFolder.dev + '**/*.html'
+    baseFolder.dev + '**/*.html',
+    devFolder.img + '**/*.jpg',
+    devFolder.img + '**/*.png',
+    devFolder.img + '**/*.svg'
   ]).on('change', $$.livereload.changed);
 
   gulp.watch(devFolder.css + '**/*.scss', ['sass']);
@@ -125,7 +127,7 @@ gulp.task('svg', function () {
 });
 
 gulp.task('copy', function () {
-  return gulp.src([baseFolder.dev + '*.html', './dev/**/*.php'])
+  return gulp.src(baseFolder.dev + '**/*.html')
   .pipe(gulp.dest(baseFolder.dist));
 });
 
