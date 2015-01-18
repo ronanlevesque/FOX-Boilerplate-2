@@ -103,7 +103,7 @@ gulp.task('jshint', function() {
 
 gulp.task('minify', function() {
   return gulp.src(devFolder.css + '**/*.css')
-  .pipe($$.minifyCss())
+  .pipe($$.minifyCss({advanced: false}))
   .pipe(gulp.dest(distFolder.css))
 });
 
