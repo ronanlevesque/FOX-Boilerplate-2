@@ -132,12 +132,12 @@ gulp.task('svg', function () {
   return gulp.src(devFolder.img + '**/*.svg')
   .pipe($$.svgmin())
   .pipe($$.svg2png())
-  .pipe(gulp.dest(distFolder.img));
+  .pipe(gulp.dest(distFolder.img))
 });
 
 gulp.task('copy', function () {
   return gulp.src(baseFolder.dev + '**/*.html')
-  .pipe(gulp.dest(baseFolder.dist));
+  .pipe(gulp.dest(baseFolder.dist))
 });
 
 // Msg tasks
@@ -147,7 +147,7 @@ gulp.task('servermsg', function () {
   .pipe($$.notify({
     title: '[TASK] -- Local server',
     message: 'Local server created at localhost:1337.'
-  }));
+  }))
 });
 
 gulp.task('testmsg', function () {
@@ -155,7 +155,7 @@ gulp.task('testmsg', function () {
   .pipe($$.notify({
     title: '[TASK] -- Testing files',
     message: 'Tests run on your CSS, HTML and JS files. See console for more details.'
-  }));
+  }))
 });
 
 gulp.task('deploymsg', function () {
@@ -163,7 +163,7 @@ gulp.task('deploymsg', function () {
   .pipe($$.notify({
     title: '[TASK] -- Deploy',
     message: 'Files successfully deployed under /dist.'
-  }));
+  }))
 });
 
 // Run tasks
