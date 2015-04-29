@@ -95,7 +95,16 @@ gulp.task('htmlhint', function() {
 
 gulp.task('jshint', function() {
   return gulp.src(devFolder.js + '**/*.js')
-  .pipe($$.jshint())
+  .pipe($$.jshint({
+    browser: true,
+    curly: true,
+    eqeqeq: true,
+    eqnull: true,
+    latedef: true,
+    noarg: true,
+    undef: true,
+    unused: true
+  }))
   .pipe($$.jshint.reporter('default'))
 });
 
