@@ -59,6 +59,8 @@ gulp.task('sass', function() {
 gulp.task('scripts', function() {
   return gulp.src([devFolder.js + '**/*.js', '!' + devFolder.js + 'ie/*.js', '!' + devFolder.js + '**/main.js'])
   .pipe($$.babel())
+  .on('error', $$.notify.onError("Error: <%= error.message %>"))
+  .on('error', handleError)
   .pipe($$.concat('main.js'))
   .pipe(gulp.dest(devFolder.js))
 });
