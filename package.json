@@ -9,25 +9,26 @@
     "url": "http://ronanlevesque.fr"
   },
   "devDependencies": {
-    "gulp": "*",
-    "gulp-load-plugins": "*",
     "connect": "*",
     "connect-livereload": "*",
-    "gulp-livereload": "*",
-    "serve-index": "*",
-    "serve-static": "*",
-    "gulp-watch": "*",
-    "gulp-sass": "*",
+    "gulp": "*",
     "gulp-autoprefixer": "*",
-    "gulp-minify-css": "*",
+    "gulp-babel": "*",
+    "gulp-concat": "*",
     "gulp-csslint": "*",
     "gulp-htmlhint": "*",
-    "gulp-jshint": "*",
     "gulp-imagemin": "*",
+    "gulp-jshint": "*",
+    "gulp-livereload": "*",
+    "gulp-load-plugins": "*",
+    "gulp-minify-css": "*",
+    "gulp-notify": "*",
+    "gulp-sass": "*",
     "gulp-svg2png": "*",
     "gulp-svgmin": "*",
-    "gulp-concat": "*",
     "gulp-uglify": "*",
-    "gulp-notify": "*"
+    "gulp-watch": "*",
+    "serve-index": "*",
+    "serve-static": "*"
   }
 }
