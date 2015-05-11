@@ -71,7 +71,7 @@ gulp.task('watch', function () {
 
   gulp.watch([
     devFolder.css + '**/*.css',
-    devFolder.js + '**/*.js',
+    devFolder.js + 'main.js',
     baseFolder.dev + '**/*.html',
     devFolder.img + '**/*.jpg',
     devFolder.img + '**/*.png',
