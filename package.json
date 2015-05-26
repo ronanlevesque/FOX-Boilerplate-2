@@ -24,7 +24,6 @@
     "gulp-minify-css": "*",
     "gulp-notify": "*",
     "gulp-sass": "*",
-    "gulp-svg2png": "*",
     "gulp-svgmin": "*",
     "gulp-uglify": "*",
     "gulp-watch": "*",

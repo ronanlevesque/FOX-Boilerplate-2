@@ -134,7 +134,6 @@ gulp.task('img', function() {
 gulp.task('svg', function () {
   return gulp.src(devFolder.img + '**/*.svg')
   .pipe($$.svgmin())
-  .pipe($$.svg2png())
   .pipe(gulp.dest(distFolder.img))
 });
 
