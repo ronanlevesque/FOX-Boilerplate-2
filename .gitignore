@@ -1,7 +1,6 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-.DS_Store
+# Prod files
+
+/assets/
 
 # Node
 
@@ -11,3 +10,8 @@ ehthumbs.db
 
 /.sass-cache/
 
+# Others
+
+Thumbs.db
+ehthumbs.db
+.DS_Store

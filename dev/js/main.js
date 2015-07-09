@@ -1,2 +1,1 @@
-// Don't put anything in this file :)
-// This will be used to concatenate all your JS files
+// You can use ES6 imports here

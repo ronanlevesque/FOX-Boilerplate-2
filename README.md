@@ -6,10 +6,10 @@ An HTML5 / Sass / Gulp Boilerplate including [FOX CSS](http://fox-css.com). Curr
 * FOX CSS framework (Sass)
 * Sass & CSS3 Autoprefixer (compile on default task)
 * Livereload (no plugin required)
-* JSHint, CSS Lint and HTML Lint
-* IE7&8 support (HTML5 shiv & Respond.js)
+* JSHint, CSS Lint and HTML Hint
+* IE9+ support
 * Files minification (CSS, JS and images)
-* Local server at `localhost:1337`
+* Local server at `localhost:8000`
 * Notifications system with Growl
 
 And more to come.
@@ -33,7 +33,7 @@ Download and install FOX Boilerplate files in the directory where you want to wo
 FOX-Boilerplate is composed of two main folders :
 
 * dev
-* dist (created on 1st `deploy` task)
+* assets (created on 1st `gulp` task)
 
 Files should be placed in the following folders inside your project :
 
@@ -54,16 +54,16 @@ Run the following commands depending on what you want.
 
 ### gulp
 
-`gulp` will run a local server at `localhost:1337` using `dev` folder as a root, and will also run the `watch` task, which includes the following: livereload (requires the [Chrome plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei)), Sass files compilation, autoprefix task and JS concatenation.
+`gulp` will run a local server at `localhost:8000` using `dev` folder as a root, and will also run the `watch` task, which includes the following:
+
+* livereload
+* Sass files compilation, autoprefix
+* JS concatenation
+* CSS, JS and images minification.
 
 ### gulp test
 
 `gulp test` will run JSHint on your JavaScript files and will also test your HTML and CSS files. You can also run each task separately with `gulp lint`, `gulp css` and `gulp html`.
-
-
-### gulp deploy
-
-`gulp deploy` is the final task to be run once you wish to deploy your project. It will minify your CSS, uglify your JS, optimize your images (JPG, PNG and GIF), create  PNG files from SVG files and will place all those files inside a /dist/ folder which will respect your folder hierarchy.
 
 If you need more info on Gulp, you should take a look at Gulp's [guide](https://github.com/gulpjs/gulp/blob/master/docs/README.md).
 
@@ -79,7 +79,7 @@ If you need help, please [contact me](https://twitter.com/ronanlevesque) on Twit
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Ronan Levesque
+Copyright (c) 2015 Ronan Levesque
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
