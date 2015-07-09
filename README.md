@@ -37,8 +37,7 @@ FOX-Boilerplate is composed of two main folders :
 
 Files should be placed in the following folders inside your project :
 
-* CSS : dev/css/
-* SCSS : dev/css/sass/..
+* SCSS : dev/sass/..
 * JS files : dev/js/
 * Images : dev/img/..
 * HTML files : anywhere inside dev/
