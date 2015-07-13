@@ -67,7 +67,7 @@ gulp.task('styles', () => {
 // Scripts
 
 gulp.task('scripts', () => {
-  let b = browserify({
+  const b = browserify({
     entries: devFolder.js + 'main.js',
     debug: true
   })
