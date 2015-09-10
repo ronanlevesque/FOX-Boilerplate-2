@@ -99,9 +99,9 @@ gulp.task('watch', () => {
   $$.livereload.listen();
 
   gulp.watch([
+    '**/*.html',
     distFolder.css + '**/*.css',
     distFolder.js + '**/*.js',
-    baseFolder + '**/*.html',
     distFolder.img + '**/*.jpg',
     distFolder.img + '**/*.png',
     distFolder.img + '**/*.svg'
