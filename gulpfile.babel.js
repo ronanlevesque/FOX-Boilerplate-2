@@ -60,7 +60,7 @@ gulp.task('styles', () => {
   .on('error', handleError)
   .pipe($$.autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
   .pipe(gulp.dest(distFolder.css))
-  .pipe($$.minifyCss())
+  .pipe($$.cssnano())
   .pipe(gulp.dest(distFolder.css));
 });
 
@@ -71,7 +71,7 @@ gulp.task('scripts', () => {
     entries: devFolder.js + 'main.js',
     debug: true
   })
-  .transform(babelify)
+  .transform(babelify, {presets: ['es2015']});
 
   return b.bundle()
   .on('error', $$.notify.onError("Error: <%= error.message %>"))
